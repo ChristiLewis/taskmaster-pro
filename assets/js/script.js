@@ -1,5 +1,12 @@
 var tasks = {};
 
+//DEPLOYMENT ERROR FOR SORTABLE - ADDING THIS FUNCTION SOLUTION TO DEBUG FROM https://www.codegrepper.com/code-examples/csharp/Uncaught+TypeError%3A+%24%28...%29.sortable+is+not+a+function
+
+$(function () {
+  $("#sortable").sortable();
+  $("#sortable").disableSelection();
+});
+
 var createTask = function (taskText, taskDate, taskList) {
   // create elements that make up a task item
   var taskLi = $("<li>").addClass("list-group-item");
