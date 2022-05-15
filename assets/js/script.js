@@ -86,7 +86,7 @@ $(".card .list-group").sortable({
     $(".bottom-trash").addClass("bottom-trash-drag");
   },
   deactivate: function (event, ui) {
-    $(this).removeClass("dropover");
+    $(this).addClass("dropover");
     $(".bottom-trash").removeClass("bottom-trash-drag");
   },
   over: function (event) {
@@ -330,8 +330,8 @@ $("#remove-tasks").on("click", function () {
 // load tasks for the first time
 loadTasks();
 
-setInterval(function () {
-  $(".card .list-group-item").each(function (index, el) {
-    auditTask(el);
+setInterval(function() {
+  $(".card .list-group-item").each(function() {
+    auditTask($(this));
   });
-}, 18000000);
+}, 1800000);
